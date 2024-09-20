@@ -1,19 +1,8 @@
-# Week 2
-
-### Grading
-
-Task #|Points|Description|
------|:---:|----------|
-[Task 1](#task-1-choose-a-or-b) | 1 | Browsers and Banking Security ***or*** Certifcates
-[Task 2](#task-2-cards-and-payments) | 1 | Cards and Payments
-[Task 3](#task-3-card-fraud) | 1 | Card Fraud
-[Task 4](#task-4-wazuh) | 1 | SIEM Wazuh 
-
----
 
 # Tasks
 
 ### Task 1: Choose A ***or*** B
+I am going to task A .
 
 #### Task 1A: Browsers and Banking Security
 
@@ -30,44 +19,40 @@ Look at the following snippets from a browsers address bar:
 **Questions:**
 
 - What does the "Not Secure" warning mean in the first picture and what risks does visiting sites with the warning pose?
+
+Answer: In the first picture, the word ‘Not Secure’ which appears in the address bar which means that the site address does not have HTTPS added to its URL, which encrypts data between the browser and the server. These kind of sites are rather dangerous as one can face data interception and risky for the data.
+
 - Why does the second site show up as "trusted" to the browser?
+
+Answer :In the second picture it appears as “trusted” whether the browser issued a valid SSL/TLS certificate. This is indication of the padlock symbol. This certificate makes sure that the information that is exchanged with the user on the site is secure.
+
+
 - What other ways are there to detect a phishing/scam site? 
-    - Are there any tools available online?
+
+Answer:There are a lot of ways to detect a pishing/scam website:
+Look for the existence of HTTPS and appropriate certificate.
+You should also look for the website design as mostly scammers provide the low-quality site design, grammatical errors, and a lot of symbol errors.
+The scamsites can also be confirmed through an official e-mail from the organization.
+
+- Are there any tools available online?
+
+Answer:There are a few online sites to check the phishing/scam sites.
+1:Website reputation checkers like Google Safe Browsing
+2:Checkphish
+3:Scamvoid
+4:Aura
+
 - What is typosquatting and how does it relate to the pictures?
+
+Answer:Typosquatting is the process of registering domains that are similar in appearance to different websites with the aim of leading the users to the wrong sites. In the pictures, similar looking URLs like "danskebankk.fi’ and "danskebank.io" are made to confuse the users.That is called typosquatting.
+
     - What is **UDRP** and how does it help with combatting typosquatting?
+ 
+ Answer : UDRP stand forUniform Domain-Name Dispute-Resolution Policy (UDRP) assists the trademark proprietors legal tools with which to challenge and regain the domains that are closely similar to their trademarks.
+
     - If you were to own the domain **ouspg.org** and would be running your crypto banking application at **bank.ouspg.org**, what domains could you monitor for warning signs of possible phishing attempts against your customers?
 
-
-#### Task 1B: Certificates
-
-You have probably seen the following kind of warning when browsing the internet:
-
-![Certificate image 1](https://github.com/ouspg/SecurityEngineering/blob/main/Week2_Banking_and_Payments/Images/certificate_1.png)
-
-**Questions:**
-
-- What are digital certificates used for?
-    - Why are certificates important for online payments and banking security?
-    - What other uses do certificates have?
-- What kind of attacks does TLS mitigate and why is this important for online banking?
-- How do browsers use certificates for ensuring browsing security?
-    - What does the warning in the picture above mean?
-
-**Certificate Authorities**
-
-Read the following entries on Certificate Authorities and Certificate Transparency and answer questions:
-
-https://en.wikipedia.org/wiki/Certificate_authority
-https://en.wikipedia.org/wiki/Certificate_Transparency
-https://certificate.transparency.dev/howctworks/
-https://www.ecb.europa.eu/pub/pubbydate/html/index.en.html
-
-**Questions:**
-
-- Why would it be bad if a trusted certificate authority was compromised?
-- Why is certificate transparency important?
-
----
+Answer:If I own “ouspg.org” and run a crypto banking application at “bank.ouspg.org,” I must have an eye and monitor the domains like “ouspgg.org,” “ousgp.org,” “bankkouspg.org,” and other similar variations.To avoid Phishing Imust have a strict authentication with the similar websites.
 
 ### Task 2: Cards and Payments
 
@@ -80,21 +65,48 @@ https://en.wikipedia.org/wiki/Multi-factor_authentication
 **Questions: Payments**
 
 - Why do modern payment cards use a chip and not a magnetic stripe?
+
+Answer:Modern payment cards contain chips because the chips are more secure than magnetic stripes. With these chips, the card produces a digital transaction code for each transaction, therefore cannot be easily fake or duplicity. On the other hand, the magnetic strip contains the static data which can be duplicated and can be legally used for fraudulent purposes.
+
 - What are EMV Certificates and why are they relevant for payment protection?
+
+  Answer:Basically, EMV certificates can be described as a kind of permit for credit card and payment machines. They make sure both are safe to use. This helps us to  verify that a card is real and keeps us from stealing money, making sure that the transactions safer.
+
 - What attacks exist against payment cards?
     - Card-not-present?
     - Contactless payment?
 
+Answer:
+Card-not-present (CNP) Fraud: This kind of  happens when people shop things online without the card being there. The scammer steal card info through tricks like phishing or data breaches to make fake shopping.
+
+Contactless Payment Attacks: Contactless payments are easy, but they can be risky. One of the example is "skimming"  when someone secretly gets your card information with a special device. In ois ther kind  "relay attack," when two devices trick the payment machine into thinking a fake card is real.
+
 **Questions: MFA**
 
 - How is multi-factor authentication (MFA) used in banking?
+
+Answer:MFA in banking means you need to prove your identity in two or more ways before you can access your account. This usually combines something you know with something you have.
+
 - How does multi-factor authentication increase payment security?
+
+Answer:MFA makes it harder for scammers to access your account because they need more than just your password. Even if they get your password, they still need the second factor, like a code is to be sent to your phone.
+
 - What MFA methods are you using in you daily life?
+
+Answer:I use
+Authenticator.
+Fingerprint or face recognition .
+Codes sent to email or phone.
+
 - What attacks exists against different forms of 2FA?
     - Time-based-one-time-password?
     - Text Message?
 
----
+Answer:
+Time-Based One-Time Password
+Phishing: Scammers trick you into sharing your code.
+Text Message (SMS) Codes:
+Someone tricks your phone company to take over your number and get your codes.
 
 ### Task 3: Card Fraud
 
@@ -118,57 +130,65 @@ https://www.ecb.europa.eu/paym/intro/mip-online/2018/html/1803_revisedpsd.en.htm
 Write a summary (max 700 words) on "Evolution of card fraud" in which you answer **at least** the following questions:
 
 - What kinds of card fraud exist?
+- 
+Answer:There are a few Card frauds come in several forms:
+Card-present (CP) fraud
+Card-not-present (CNP) fraud
+Account takeover
+Application fraud
+
     - How does card fraud type prevalence differ geographically?
+
+Answer:Card fraud is different in different parts of the world. In Europe, they use  EMV chip technology that has made it much harder for criminals to duplicate the physical cards, so card-present fraud has has less chances to get in. In North America, this type of fraud has been high for a while because chip cards were made very  slowly, but things got  improved by the mid-2010s. In places like Asia and Latin America, online fraud is more common due to the boost of e-commerce and weaker security systems.
+
 - How has the fraud landscape changed between 2008-2019? Why?
+- 
+Answer:Between 2008 and 2019, the fraud landscape changed significantly.When the EMV chip technology rised the Card-present fraud declined and the technology made it harder to clone physical cards.But the card-not-present (CNP) fraud like online fraud, rised due to the boost of e-commerce and online payments. As more people started shopping online and the scammers started focusing on digital transactions, which don't require any of physical cards.
+
     - What type of fraud has seen a notable increase during the last decade?
+    - 
+Anser:Card-not-present (CNP) fraud has increased over the last decade.This type of fraud, which occurs in online, phone, or mail transactions where the physical card is not required.
+
     - What technologies or regulations have had an impact on card fraud?
+
+Answer:There are several technologies and regulations that have helped to reduce card fraud:
+1:EMV chip technology
+2:3D Secure
+3:PSD2 (Payment Services Directive 2)
+
 - How has the transaction landscape changed in the same period?
+
+Answer:There are few things that have changed from last decade
+1:Rise of e-commerce
+2:Mobile payments
+3:Contactless payments
+These shifts made transactions more easy but also increased the risks.
+
     - What kind of transactions have become increasingly popular?
+
+Answer:There are few things that have become popular
+1:Online shopping
+2:Mobile payments
+3:Contactless payments
+
     - What kind of transactions have had a high risk of being fraudulent?
+
+Answer:
+1. Card-not-present (CNP) transactions  
+2. High-value purchases  
+3. Cross-border transactions
+
         - Has this changed at all during 2008-2019?
 - What effect has internet and e-commerce had on card fraud?
+Answer:As the internet and e-commerce are getting popular theft through cards especially card-not-present (CNP) fraud has also increased by a large percentage. Scammers have taken advantage of the digital transaction to steal and use credit and debit cards informatively.
+
 - Why is preventing data breaches important in preventing card fraud?
+
+Answer:Preventing data breaches important in preventing card fraud because breaches expose sensitive information making it easy for scammers to do fraud using stolen card details.Preventing breaches helps minimize financial loss for both consumers and businesses by reducing the number of fraudulent transactions
+
     - How does payment card tokenisation help in this?
+Answer:Payment card tokenization helps prevent card fraud by  replacing sensitive card information, or the card number, as an example one can use an individual and encrypted token which these fraudsters would not recognize anyway. In case of data breach, the real card data are not disclosed so as to minimize fraud risks.
+
 -Anything interesting you found?
 
 ---
-
-### Task 4: [Wazuh](https://www.wazuh.com)
-
----
-
-> **note**
-> Task tested to work on v4.9.0, written and designed on v4.5.1. v4.9 has a couple of known issues with details being unable to be read from events. If you face issues, fallback to e.g v4.5.1, which still works.
-
----
-
-Wazuh is an free and open source "unified XDR and SIEM protection for endpoints and cloud workloads." In this task we are going to focus more on the [SIEM](https://www.gartner.com/en/information-technology/glossary/security-information-and-event-management-siem) side of things. Take a look at their [website](https://wazuh.com/platform/siem/) and [github](https://github.com/wazuh/wazuh) to familiarize yourself with the capabilities and features Wazuh SIEM offers.
-
-Start of with deploying the Wazuh [single-node on Docker](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html). You should go through the documentation to understand what's going on, but the following commands should be enough:
-
-```console
-git clone https://github.com/wazuh/wazuh-docker.git -b <VERSION NUMBER e.g v4.9.0 or v4.5.1>
-cd wazuh-docker/single-node
-docker-compose -f generate-indexer-certs.yml run --rm generator
-docker-compose up -d
-```
-
-You can access the Wazuh (WUI)WebUI at your localhost, to do this go to [https://localhost](https://localhost). By default Wazuh uses self signed certs and you won't be directed to the site directly, instead click the advanced tab and find the button for "Accept the risk and continue". This will direct you to the site, and from then on you should be able to use it normally.
-
-Next deploy an agent or agents. You can deploy the agent(s) on your own platform(server, desktop, etc...) or the course virtual machine. For the course virtual machine use the "installation from source" --> "installing Wazuh agent from sources". Arch linux, the course VM uses pacman for package management so you could use that. [Installation alternatives](https://documentation.wazuh.com/current/deployment-options/wazuh-from-sources/wazuh-agent/index.html) in the documents.  
-
-For other environments, find the appropriate [installation documention](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/index.html), many can be installed in the Wazuh WUI(Web User Interface), for windows, choose windows and fill out the details, run the command and start the agent. For the ip address of the server, you can use your internal ip address.
-
-Create a directory named integrity and add a file to it, then enable FIM(File Integrity Monitoring) on your agent(s) on that folder, you should also set the scan frequency at around 60 seconds, so you won't have to wait for the events. 
-
-You are to trigger the FIM with atleast two different events. Then answer the questions below.
-
-**What to return:**
-1. What rule descriptions did you get?
-2. What are the MITRE ATT&CK techniques(include ID) Wazuh reports for these events?
-3. What is the reported MITRE techniques for deleting files or directories inside monitored directories?
-4. Explain in your own words where, when and why should these systems be used, would they be helpful in banking.
-5. Add a screenshot of your integrity monitoring events tab.
-
-### Feedback
-Be sure to give feedback on these tasks. Do you feel these to be the kind of skills you might need or want?
