@@ -1,34 +1,36 @@
 # **Week 4**
 
-### Grading
-
-Task #|Points|Description|
------|:---:|----------|
-[Task 1](#task-1-side-channels) | 1 | Side-channels
-[Task 2](#task-2-slow-loris) | 1 | Slow Loris
-[Task 3](#task-3-burpsuite-introduction) | 2 | BurpSuite & thc-hydra
-
----
-
-# Tasks
-
-### Task 1: Side-channels
+### Task 1
 
 Choose an example of a side-channel attack and explain the following information about it:
 
-- Brief explanation of what side-channel the attack uses and how
+Fault Injection Attack
+
+In fault injection attack, attacker induces some faults into a system . it makes system  act in an improper way. This kind of attack may leak information such as keys used for cryptographic to the system through identifying the faults that the system provides.
 
 - What systems does it affect?
 
+Mostly it can affect any kind of hardware system, but specifically it has more chances to affect the embedded systems and smart cards that involve cryptographic processing.
+
 - What information is leaked via the side channel?
+
+ The information in the device’s outputs which can be exploited by attackers to get their hands on keys that were supposed to be kept secret or to find the  ways of bypass the security features put in place.
 
 - Is there a documented case of it being used in a real life attack?
 
+Yes there are a lot of  previous cases indicate that fault injection has been implemented  to affect smart cards and other forms of secure hardware in order to control and extract cryptographic keys.
+
 - Has it been fixed? If yes, how it was fixed?
+  
+There are a few techniques that can be used to fix these kind of faults.
+Error Detection Mechanisms: 
 
-This time, You are not expected to produce an essay. Direct answers to questions above are sufficient. List sources and keep the answer concise at max 300 words not including sources.
+Combining several sub-system to make sure that a failure will not have effect on the functionality of the whole system.
+Secure Design Practices: Designing systems such that it can recover from environmental interferences.
 
----
+Secure Design Practices: 
+Designing systems such that it can recover from environmental interferences.
+
 
 ### Task 2: Slow Loris
 
@@ -38,17 +40,29 @@ Seek information about the Slowloris Denial-of-Service attack and answer to the 
 
 - How does it work?
 
+Slow Loris makes multiple connections to a web server and maintains them open by sending the just formulated HTTP requests to bring the server down.
+
 - Why is it unique while compared to the other high bandwith DDoS attacks?
+
+ It is very bandwidth effective and keeps all the  connections open rather than bothering the server with high amount of connections, it works really good against low connection servers.
 
 - What are the effects of the attack?
 
+ It turns into irresponsive to users.It also gives either high downtime for certain requests or extremely slow responses because of  overloaded with fake requests.
+
 - How can you mitigate/prevent the effects of the attack?
+
+We cab prevent the effects of the attacks by 
+
+Increasing timeout settings for the server open connections.
+Reducing connection from the same IP address.
+Applying Web Application Firewall (WAFs).
 
 - Are there any notable instances of this style of attack being performed?
 
-This time, You are not expected to produce an essay. Direct answers to questions above are sufficient. List sources and keep the answer concise at max 300 words not including sources
+Yes, this was used in 2009 on a the website of an activist organization against controversial political Website and it is very effective.
 
----
+
 
 ### **Task 3**: BurpSuite Introduction
 
