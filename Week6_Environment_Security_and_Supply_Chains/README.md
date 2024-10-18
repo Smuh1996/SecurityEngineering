@@ -1,18 +1,5 @@
-# **Week 6**
 
-### Grading
-
-Task #|Points|Description|
------|:---:|----------|
-[Task 1](#task-1-secure-running-environment) | 1 | Secure Running Environment
-[Task 2](#task-2-supply-chain-attacks) | 1 | Supply Chain Attacks 
-[Task 3](#task-3-securing-docker) | 2 | Securing docker
-
----
-
-# Tasks
-
-### Task 1: Secure Running Environment?
+# Secure Running Environment?
 
 It is important to understand the differences and security capabilities of the concepts listed below. Choose two out of the four concepts and write a short explanation of them and their respective security capabilities and incapabilities.
 
@@ -25,65 +12,88 @@ Focus on giving a good overview of the security limits for the concepts.
 
 **Max 300 words excluding sources.**
 
----
+#Answer
+We will explain two of the following 
+1:Enclave 
+2: Containers 
+
+Enclave
+
+A security enclave is a secured region within a processor where code as well as data can be stored in a protected way. It helps us to ensure that computations which are very sensitive and  can be performed with varying degrees of isolation from interference by other software or the operating system. This makes them suitable for using them in activities such as protection of sensitive data while the data is under processing.
+
+
+On other hand enclaves have their security constraints that make them deficient. They depend on the physical foundation.However if there can some errors  in the code written for the enclave then an attacker can attack easily and breach the security that is expected from them.
+
+Containers
+
+
+Containers are light weight mobile entities that gather applications and their dependencies into one place. They are efficient for deploying applications since they are implemented in the host operating system’s kernel but operate in different user spaces.
+
+However containers have their drawbacks. Because all the containers are based on the same kernel if a hacker finds a way to enter on of the kernel he will be able to access all the containers on the host.
+
 
 ### Task 2: Supply Chain Attacks
 
-In this task we are looking at the difficulties handling supply chain attacks, specifically detecting and responding.
 
-For this scenario you are working for a networking hardware and software company, and you're tasked with securing their supply chain. The company manufactures and sells routers with their own software and other various networking accessories B2B and B2C.  Some parts for the routers have to be outsourced and manufactured outside company.
 
-Research and write a report on concrete actions you could implement on the supply chain, trying to make sure the product is not being tampered or researched with malicious intent. Keep in mind, that the supply chain includes third party tools, code and update providing, as well as other companies maintaining firmware. Your supply chain must include **at least four** actors including your company. You should analyze the points of concerns in the report.
+Securing the Supply Chain Against Attacks
 
-Provide reasoning for your choices and analyze what potential problems and additional actions these choices might require from your company.
 
-Probable actors in such supply chains include, but are not limited to:
+The supply chain for our company includes a few  key actors:
+First of all 
+Our company 
 
-- Employees, in-house and outsourced
-- Transportation companies
-- Retail companies
-- Storage facilities
-- Part suppliers
+That manufactures routers and software.
+The second will be Supply components or part suppliers that supply like chips and circuit boards.Transport that manages logistics and delivery of parts and products.And the last one is 
+Retail Companies
 
-<details>
-<summary>Example supply chain</summary>
-<br>
+That sell the products to businesses and consumers.
 
-Hardware
-- 3rd party company X manufactures antennas for the routers
-- Truck company Y transports them to 
-- Factory Z, where it is assembled by workers 
-- Y transports them to resellers A and B
+There are a few thin to keep in mind 
 
-<br>
+Outsourced Manufacturing: 
+Outsourcing of manufacturing of components may present a risk of having the modified by some mischievous individuals. The blamed facilities are not secure enough or not enough overseen, which means that insecure parts could be integrated into end products.
 
-Software
-- Own employees create it
-- Company C provides contractual coders for help
-- Company D audits software
-- Company E hosts internal tools
+2. Transportation Companies: In shipping, some goods may be seized and changed by other people or organizations. Presence of vulnerable link in the kernel can cause some type of unauthorized access.
 
-<br>
-You can use the examply supply chain in your task if you want to.
-<br>
-</details>
+3. Retail Companies:If the retail environment is not safe,some products can be tampered with before getting to the consumers. This is dangerous because it translates to passing compromised devices in the market.
 
-Some concepts to help you get started:
-- NDR (Network Detection and Response)
-- UBA (User Behavioral Analytics)
-- EDR (Endpoint Detection and Response)
-- TPM (Trusted Platform Module)
+4. In-house Employees: The insiders are often a real threat when people have access to some information or applications in the organization. Employee training also becomes a potential security risk when done poorly.
 
-Real-life cases for inspiration:
-- [SolarWinds](https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic)
-- [Routers, servers and networking equipment from the USA](https://www.infoworld.com/article/2608141/snowden--the-nsa-planted-backdoors-in-cisco-products.html) | Notice the second page accessible at the bottom of the article
+Concrete Actions
+Measures for the protection of supply chains
+1. Vetting Suppliers
+   
+Our first step in addressing security of the supply chain should involve conducting stringent supplier certification and Supplier security audit. This step helps to try and eliminate bad components from getting into our supply chain even if it will take some time for production as a result of management taking time to inspect each one.
 
-**Minimum 500 words,  
-Maximum 4 visual representations,  
-Each visual representation is minus 50 words off the total required.**
+2. Secure Transportation
 
-For example a report with 3 visuals requires 350 words.  
-The visuals must be useful for the report, ex. company logos do not count.
+Next is security during transit can be improved
+through using sealed security bags which can
+be sealed in a way that is noticeable if the seal
+has been broken, and by having the parcels
+GPS tracked. Setting sensitive rules for logistic
+individuals assures security and the possibility
+to identify any alteration. However this leads to
+improvement in the safety of the product it
+also implies the incurring of extra costs that
+may also lead to a delay in the shipment.
+
+3. Deploy Network Detection and Response 
+
+To prevent any penetration or remain undetected we should use NDR systems in the development and manufacturing of networks. This is useful to us because it allows us to act before such threats materialise. But to be effective it does need continuous investment in technology and people development.
+
+4. Develop User Behavioral Analytics (UBA)
+
+Incorporation of UBA tools will enable us understand the activities of the employees and detect any suspicious activity. If we are able to identify these anomalies.We are able to counter insider threats before they worsen. The drawback is it might increase such privacy issues.
+
+5. Firmware and software update checks demographically
+
+Third-party firmware and software must be audited at least once in a while to determine if there are any vulnerabilities, or malicious codes added in them. This means that only secure update are used to ensure that out final products are not compromised. But these audits have to be carried out independently and may ultimately slow down our updates.
+
+Conclusion
+
+ Protection of our supply chain from attacks include robust supplier verification process, transport security as well as implementing newer technologies such as NDR and UBA. Even though such measures may be a bit resource-demanding and phrase-consuming, the advantages of preserving our products and customers’ confidence are far beyond those challenges. Therefore by trying to identify the possible areas of threats we are capable of protecting ourselves and our clients from supply chain attacks.
 
 ---
 
