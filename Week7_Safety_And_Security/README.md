@@ -1,18 +1,5 @@
 # Week 7
 
-### Grading
-
-Task #|Points|Description|
------|:---:|----------|
-[Task 1](#task-1-safety-concerns) | 1 | Safety Concerns
-[Task 2](#task-2-static-and-dynamic-analyzers) | 1 | Static and Dynamic Analysers 
-[Task 3](#task-3-security-certification) | 1 | Security Certifications
-[Task 4](#task-4-nis2--red) | 1 | NIS2 & RED
-[Task 5](#task-5-showcase) | 1 | Showcase
-
-(4 points max)
-
----
 
 # Tasks
 
@@ -23,19 +10,55 @@ In terms of medical equipment and automotive industry mentioned in the Lecture 1
 - Why are new safety concerns sometimes overlooked? 
 - What are events that trigger sudden change? 
 
-250 words **maximum**, cite if you use external sources 
 
-[Security Engineering Lecture 13: Safety and Security](https://www.youtube.com/watch?v=uZkQtnHKcJ4) 
+ # Answer
 
----
+
+ everal factors contribute to giving new safety concerns the raw deal. First of all, it can be very challenging to detect new issues in existing complex systems. Second, companies simply remain loyal to mundane approaches that secure their product certifications, whereas failing costly recalls. They could not spend enough time and possibly money in tracking down how their products are used after being sold or in designing new interfaces to usability features, even if new safety risks emerge during ongoing use. Moreover, in case issues emerge, it is possible to observe that they could be caused by users themselves, which creates a culture of masking these issues.
+
+Large scale transformations typically occur either after an event involving loss of life or following actions by external agents such as government or public criticism following an industry disaster. For instance, the medical device industry underwent a major transformation when it was realized that some of its infusion pumps are vulnerable to remote hacking and the FDA stepped in. Likewise in the automotive industry, most innovations, including the addition of seatbelts, occurred thereafter to meet public outcry or after emergence of terrible accidents. These examples only prove how essential influence from outside entities are in demanding for deeper reforms
 
 ### Task 2: Static and Dynamic Analyzers
 
 Explain the difference between static and dynamic analyzers. Explain what the advantages are of using these tools during production.  Pick one of the Static or Dynamic testing methods mentioned in the Lecture 14 and write a brief description of it. 
 
-300 words **maximum**, cite if you use external sources 
+# Answer 
 
-[Security Engineering Lecture 14: Assurance and Sustainability](https://www.youtube.com/watch?v=cmWQF2FDlG8) 
+Static Analyzers
+
+How They Work?
+
+Cube checking code without executing them.
+What They Find?
+
+It seeks such problems as errors in the code, code flaws and security defects prior to the code running.
+Benefits: As a prototyping approach, they help in identifying problems early enough in the development life cycle to reduce the efforts and time needed. This makes the code much more maintainable and easier to manage.
+
+Dynamic Analyzers
+
+How They Work?
+
+They perform the tests on the software when it is in operation.
+
+What They Find?
+
+They point out conditions which occur during run time and include memory leaks or buffer overflows which are but runtime conditions.
+
+Benefits:
+
+They give information about how the software works when used in real situations with a view of revealing security weaknesses or poor performance as the case maybe at the time of use.
+
+Example of Static Testing: Linters
+
+One kind of static testing tool is called linters.
+
+What They Do?
+
+Linters inspect the code for stylistic issues, formatting issues and what possibly be an error in the actual code.
+
+Benefits: 
+
+They guarantee that the code correctly adhere to the coding standards, and recommended practices, in order that code can be easily readable and well structured. This becomes useful when many developers are working on a project to avoid one mistake piling up the other
 
 ---
 
@@ -47,42 +70,111 @@ Consider the different incentives (both 'Good' and 'Bad' incentives) for Securit
 - Certifying authority (both vendor funded and non-profit) 
 - Manufacturer/designer of the product 
 
-400 words **maximum**, cite if you use external sources 
+# Answer
 
-**(EXPLANATIONS)**
+It can be found that the reasons for getting security certification are diverse for each group involved and the impact that these reasons may have will also vary depending on their role.
 
-- Vendor funded = Applicant pays the certifying authority for the certification process 
-- Non-profit = Applicant does not have to pay directly for the certification process 
+Potential End User/Buyer
 
+Good Incentives: 
 
-[Security Engineering Lecture 15: Governance and Regulation](https://www.youtube.com/watch?v=PdMzMHizEaE) 
-[Security Engineering Lecture 16: Ian Levy, NCSC - Protecting a country for fun and profit](https://www.youtube.com/watch?v=qv6SS5FhdUk) 
+Consumers would like to be sure that their information and, in some cases, their business is protected when using the product. That is why they believe in the product: security certifications prove that the product has gone through the proper testing and stands up high security standards.
 
----
+Bad Incentives: 
+
+Occasionally, buyers may overestimate the credibility of a certification logo, thereby believing that the identified product is fully safe. This can result in negligence after purchase and failure to verify the product again, which is necessary because new problems with security can arise.
+
+Certifying Authority
+
+Vendor-Funded (Good): 
+
+Certifying authorities backed by the vendors can maintain high quality because certification requirement are made strict. This assists to guarantee the ensuing products adhere to security provisions which is advantageous to the community.
+
+Vendor-Funded (Bad): 
+
+This is because if the vendors are paying directly for their certification, we may find ourselves dealing with unqualified vendors. The certifying authority will always feel pressured to fast track certifications or even overlook some of these issues so that to keep their clients happy.
+
+Non-Profit (Good): 
+
+A non-profit certifying authority for example a NGO as in the case with SOAS may not rush a certification process since she has no economic motives. This means that more time is given to properly test these Systems hence making certifications more about security and safety than outside influence.
+
 
 ### Task 4: NIS2 & RED
 
-There are currently two incoming European Union Directives that will affect current and future products and services. These Directives are:
-- Revised Directive on Security of Network and Information Systems (NIS2)
-- Radio Equipment Directive (RED)
+ # Answer
 
-Traficom has collected information regarding both quite concisely providing a good starting point for familiarizing on the subject
-- (NIS2) https://www.kyberturvallisuuskeskus.fi/en/our-activities/regulation-and-supervision/nis2-european-union-cybersecurity-directive
-- (RED) https://traficom.fi/en/news/new-information-security-requirements-eu-improve-information-security-wireless-devices
+ Main Goal of the Directive
 
-**PICK ONE, Either NIS2 or RED and answer the following questions**  
-- Concisely explain the main goal of the directive?
-- Which types of products does it concern?
-- Which types of organizations does it concern?
-- What kind of cybersecurity measures have to be implemented for a product/organization to comply with the directive?
-- When (Date) do organizations/products need to comply with the directive?
-- What are possible penalties?
-- Your own thoughts: How does this benefit you/society overall. Are there positive and negative aspects?
+NIS2 is the programme that is designed to increase security of the network and information systems in the crucial sectors in EU.
 
-**You can answer directly to each bullet point with few sentences**  
+Brokers (offline and online)y across the EU by strengthening the security of network and information systems in important sectors.
+
+Types of Products Concerned
+
+NIS2 affects products like:
+
+Cloud computing services
+Digital services (e.g., online marketplaces, search engines)
+Industrial control systems
+
+Cybersecurity Measures Required for Compliance
+
+Organizations must implement measures such as:
+
+	Risk assessments
+
+	Incident response plans
+
+	Regular security audits
+
+	Employee cybersecurity training
+
+	Reporting significant incidents to authorities
 
 
----
+
+
+Compliance Deadline
+
+NIS2 also states that an organization shall has to have complied by October 17, 2024.• Penalties to be paid according to the violation levely with NIS2 by October 17, 2024.
+
+Possible Penalties
+
+Penalties for not complying can include:
+
+Fines based on the severity of the violation
+Required corrective actions
+Damage to reputation
+
+Some Critical Ideas about the Greater Good
+
+Benefits:
+
+Better Security: 
+
+Accomplishes securing the important data and maintaining the reputation of the crucial services.
+Improved Recovery: 
+
+Can assist organizations to handle cyber events to a higher level.
+Standardization: 
+
+Reduces the number of legal formalities to be fulfilled across EU countries.
+
+Negative Aspects:
+
+Costs for Small Businesses: 
+
+Compliance may be financially burdensome to small enterprises At this point, compliance costs may run high for an organization.
+
+Complex Regulations: 
+
+They could be rather vague.
+
+Potential Over-Regulation: But that means setting up too many rules might hamper creativity.
+
+
+
+
 
 ### Task 5: Showcase
 
